@@ -1,4 +1,4 @@
-def swap(number, swaped_number = ''):
+def swap(number, swaped_number=''):
     if number < 10:
         swaped_number += str(number)
         print('Перевернутое число:', swaped_number)

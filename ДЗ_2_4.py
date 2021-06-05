@@ -1,4 +1,4 @@
-def sum_of_elements(counts, number = 1, summary = 0):
+def sum_of_elements(counts, number=1, summary=0):
     if counts == 0:
         print(summary)
         return

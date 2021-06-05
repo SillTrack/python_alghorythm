@@ -1,25 +1,18 @@
-def even_not_even(number, even = 0, n_even = 0):
-	flag = 0
-	if number < 10 and (number % 10) == 0:
-		even += 1
-		flag = 1
-	elif number < 10 and (number % 10) == 1:
-		n_even += 1  
-		flag = 1
-	if flag == 1:
-		print ([even, n_even])
-		return
-	digit = number % 10
-	if (digit % 2) == 0:
-		even += 1
-		number //= 10
-		even_not_even(number, even, n_even)
+def even_not_even(number, even=0, odd=0):
+	if number == 0:
+		return even, odd
 	else:
-		n_even += 1
+		current_n = number % 10
 		number //= 10
-		even_not_even(number, number, n_even)
-    
+		if current_n % 2 == 0:
+			even += 1
+		else:
+			odd += 1
+		return even_not_even(number, even, odd)
 
-even_not_even(142)
 
-
+try:
+	numb = int(input('Введите число для подсчета четных и нечетных цифр: '))
+	print(f"Количество четных и нечетных чисел в числе: {even_not_even(numb)}")
+except ValueError:
+	print('Заместо числа была введена строка. Попробуйте ещё раз.')

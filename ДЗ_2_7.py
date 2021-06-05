@@ -1,9 +1,11 @@
-def function(row_length, current_length = 1, summ_of_row = 0):
+def function(row_length, current_length=1, sum_of_row=0):
     if current_length <= row_length:
-        function(row_length, current_length + 1, summ_of_row + current_length)
+        function(row_length, current_length + 1, sum_of_row + current_length)
     else:
-        print('Подсчет по формуле: ', row_length*(row_length+1)/2)
-        print('Посчитано программой: ', summ_of_row)
+        print('Посчитано программой: ', sum_of_row)
 
 
-function(3)
+number_of_elemnts = int(input('Введите количество элементов: '))
+function(number_of_elemnts)
+print('Подсчет по формуле: ', number_of_elemnts * (number_of_elemnts + 1) / 2)
+

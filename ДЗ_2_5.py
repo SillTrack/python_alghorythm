@@ -1,7 +1,7 @@
-def function(number_in_row = 1, current_symbol = 32):
+def function(number_in_row = 1, current_symbol=32):
     if current_symbol <= 127:
         if number_in_row < 10:
-            print(current_symbol, '-', chr(current_symbol), end= ' ')
+            print(current_symbol, '-', chr(current_symbol), end=' ')
             function(number_in_row + 1, current_symbol + 1)
         else:
             print(current_symbol, '-', chr(current_symbol),)
@@ -9,7 +9,6 @@ def function(number_in_row = 1, current_symbol = 32):
             function(number_in_row, current_symbol + 1)
     else:
         return
-
 
 
 function()
